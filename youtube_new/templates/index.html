@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Comments Viewer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='indexstyle.css') }}">
+    
+</head>
+<body>
+    <h1>YouTube Comments Viewer</h1>
+    <form method="post">
+        <label for="search_query">Enter a search term:</label>
+        <input type="text" name="search_query" required>
+        <input type="submit" value="Search">
+    </form>
+    <hr>
+    <h2>Video Title:</h2>
+    <p>{{ video_title }}</p>
+    <h2>Comments (up to 10 comments):</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
+</html>

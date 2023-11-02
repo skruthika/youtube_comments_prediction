@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Classification</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <form id="commentForm" onsubmit="submitComment(); return false;">
+
+            <label for="comment">Enter your comment:</label><br>
+            <input type="text" id="comment" name="comment"><br>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+
+        <div id="prediction"></div>
+    </div>
+
+    <script>
+    function submitComment() {
+       var comment = document.getElementById("comment").value;
+       console.log("Comment:", comment); // Debugging line
+
+    var data = { "comment": comment };
+
+    fetch('/predict', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Prediction data:", data); // Debugging line
+
+        // Display the prediction
+        var predictionDiv = document.getElementById("prediction");
+        predictionDiv.textContent = data.prediction;
+    })
+    .catch(error => console.error(error));
+}
+
+</script>
+</body>
+</html>

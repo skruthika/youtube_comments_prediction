@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    
+        background-image: url('https://media.sproutsocial.com/uploads/2022/08/Youtube_Comments_v4.jpg');
+        background-size: cover; /* Adjust as needed */
+        background-repeat: no-repeat; /* Prevent image from repeating */
+        height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    color: #333;
+
+
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 200px;
+    background-color: #0c0c0c;
+    color:aliceblue;
+    font-size: 56px;
+
+
+}
+
+#comment {
+    width: 100%;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 46px;
+
+}
+
+#submit {
+    background-color: #d9cb00;
+    color: #000000;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+}

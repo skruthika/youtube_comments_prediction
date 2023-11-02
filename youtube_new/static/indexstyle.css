@@ -1,0 +1,85 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and some basic styling for the page */
+body { 
+    background-color:rgb(243, 243, 6);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+/* Style the header */
+h1 {
+    color: #333;
+}
+
+/* Style the form */
+form {
+    margin: 20px 0;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 40px;
+}
+
+input[type="submit"] {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0051a0;
+    font-size: 40px;
+}
+
+/* Style the video title and comments */
+h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+p {
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: #fff;
+    padding: 100px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Style the comments */
+ul {
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    border-radius: 5px;
+}
